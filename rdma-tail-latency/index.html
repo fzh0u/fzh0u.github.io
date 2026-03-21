@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Understanding RDMA Request Tail Latency</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A research project to characterize and mitigate tail latency in RDMA operations.">
+  <style>
+    body { font-family: sans-serif; max-width: 800px; margin: 2em auto; background: #f4f7fb; color: #222; }
+    header { border-bottom: 1px solid #ddd; margin-bottom: 2em; }
+    nav { margin: 1em 0; }
+    nav a { margin-right: 1em; text-decoration: none; color: #2176ae; font-weight: bold;}
+    nav a:hover { text-decoration: underline; }
+    h1 { color: #175276; }
+    section { margin-bottom: 2em; }
+    .card { background: #fff; padding: 1.5em; border-radius: 8px; margin-bottom: 2em; box-shadow: 0 2px 8px rgba(0,0,0,0.02);}
+    @media (max-width:600px){ body{padding: 1em;} }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Understanding RDMA Request Tail Latency</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="results.html">Results</a>
+      <a href="tools.html">Measurement Tools</a>
+    </nav>
+  </header>
+
+  <section class="card">
+    <h2>Overview</h2>
+    <p>
+      Modern datacenter applications increasingly rely on Remote Direct Memory Access (RDMA) to achieve ultra-low latency and high throughput by bypassing the operating system kernel and enabling direct data placement into application memory.
+      However, while average RDMA latency can be as low as a few microseconds, <strong>tail latency</strong>—the high-percentile (e.g., 99th or 99.9th) request completion time—remains a critical challenge.
+      Unpredictable tail latencies can severely impact large-scale distributed system performance, causing request timeouts, head‑of‑line blocking, and degraded user experience.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>Project Goals</h2>
+    <ul>
+      <li>Systematically characterize sources of tail latency in RDMA (InfiniBand, RoCE, etc.).</li>
+      <li>Isolate congestion, NIC queuing, host-side delays, and firmware interaction effects.</li>
+      <li>Develop analytical models for tail-latency behavior under various load conditions.</li>
+      <li>Explore mitigation strategies: adaptive flow control, scheduling, NIC offloads.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Methodology</h2>
+    <ul>
+      <li>Controlled microbenchmarks across transport types and network setups.</li>
+      <li>Collect real-world workload traces and high-percentile latency data.</li>
+      <li>Open-source measurement tools for reproducible research.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Expected Outcomes</h2>
+    <ul>
+      <li>Comprehensive taxonomy of RDMA tail-latency bottlenecks.</li>
+      <li>Open-source tools for tail-latency measurement and analysis.</li>
+      <li>Guidelines for building predictable RDMA-accelerated systems for applications like KV-stores, ML training, and distributed transactions.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <hr>
+    <em>
+      © 2026 Understanding RDMA Request Tail Latency | <a href="../">Back to homepage</a>
+    </em>
+  </footer>
+</body>
+</html>
