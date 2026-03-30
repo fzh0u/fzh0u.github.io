@@ -1,68 +1,195 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Fang Zhou</title>
+  <meta charset="UTF-8">
+  <title>Fang Zhou</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Personal homepage of Fang Zhou">
+  <style>
+    :root {
+      --morandi-bg: #e7e6e4;
+      --morandi-main: #bec6c6;
+      --morandi-content: #f3f2ef;
+      --morandi-accent: #b8c0c8;
+      --morandi-head: #798488;
+      --morandi-link: #7fa4a9;
+      --morandi-link-hover: #a0bfc4;
+      --recruit-red: #b34740;
+    }
+    body {
+      background: var(--morandi-bg);
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, 'Liberation Sans', sans-serif;
+      color: #222;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+    .main-container {
+      max-width: 780px;
+      margin: 38px auto 24px auto;
+      background: var(--morandi-content);
+      border-radius: 14px;
+      box-shadow: 0 4px 18px rgba(80,100,120,0.04);
+      border: 1px solid var(--morandi-main);
+      padding: 2.3em 2em 2em 2em;
+    }
+    .profile-row {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      margin-bottom: 1.6em;
+    }
+    .profile-pic {
+      border-radius: 12px;
+      background: var(--morandi-main);
+      width: 110px;
+      height: 110px;
+      object-fit: cover;
+      border: 1px solid var(--morandi-main);
+      box-shadow: 0 1.5px 6px rgba(80,100,120,.065);
+    }
+    .profile-info > h1 {
+      margin-bottom: 6px;
+      color: var(--morandi-head);
+      font-size: 2em;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+    }
+    .profile-info {
+      font-size: 1.02em;
+      line-height: 1.8;
+    }
+    .subtitle {
+      font-size: 1.08em;
+      color: #4f5962;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+    .email {
+      font-size: 0.98em;
+      color: #66697a;
+      margin-top: 4px;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid var(--morandi-main);
+      margin: 22px 0 16px 0;
+    }
+    h3 {
+      color: var(--morandi-link);
+      margin-top: 1.3em;
+      margin-bottom: 0.5em;
+      font-size: 1.18em;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    ul {
+      margin-top: 0.2em;
+      padding-left: 1.2em;
+    }
+    li {
+      margin-bottom: 0.13em;
+      line-height: 1.5;
+    }
+    a {
+      color: var(--morandi-link);
+      text-decoration: none;
+      border-bottom: 1px dotted var(--morandi-link);
+      transition: color 0.16s, border-color 0.16s;
+    }
+    a:hover {
+      color: var(--morandi-link-hover);
+      border-bottom: 1px solid var(--morandi-link-hover);
+    }
+    .recruit-box {
+      margin: 14px 0 28px 0;
+      font-weight: bold;
+      color: var(--recruit-red);
+      background: #fff4f4;
+      border-left: 5px solid var(--recruit-red);
+      padding: 0.85em 1.1em;
+      font-size: 1.07em;
+      border-radius: 5px;
+      line-height: 1.7;
+      box-shadow: 0 2px 8px rgba(180,71,64,.045);
+    }
+    .footer {
+      text-align: center;
+      padding: 2.4em 0 1.1em 0;
+      color: #92989e;
+      font-size: 1em;
+      letter-spacing: 1px;
+    }
+    @media (max-width: 600px) {
+      .main-container { padding: 1em 2vw; }
+      .profile-row { flex-direction: column; align-items: flex-start; gap:12px;}
+      .profile-pic { width: 90px; height: 90px; }
+      .profile-info > h1 { font-size: 1.25em;}
+      .recruit-box { font-size: 0.98em;}
+    }
+  </style>
 </head>
 <body>
-<div>
-<table>
-<tbody>
-<tr>
-<td>
-<img src="me.jpeg" width=200/>
-</td>
-<td>
-</td>
-<td>
-<h1>Fang Zhou</h1></br>
-Research Scientist</br>
-Meta</br>
-Email: zhou dot 1250 at osu.edu
-</td>
-</tr>
-</tbody>
-</table>
-<div>
-<div>
-<h3>About me</h3>
-Hello. I am Fang Zhou. I'm a Research Scientist at Meta. I graduated from The Ohio State University in 2021. My advisor is <a href="http://web.cse.ohio-state.edu/~wang.7564/">Dr. Yang Wang</a>.<br>
-My research interests include performance analysis, distributed systems, and cloud computing. <br>
-My CV can be found <a href="./cv.pdf">here</a>.<br>
-</div>
-<div>
-<h3>Education</h3>
-<ul>
-<li> Ph.D. in Computer Science, 2021. The Ohio State University. Advisor: Dr. Yang Wang.
-<li> Master of Science in Computer Science, 2015. Auburn University. Advisor: Dr. Weikuan Yu.
-<li> Master of Engineering in Computer Science and Technolgoy, 2012. Harbin Institute of Technology. Advisor: Dr. Debin Zhao
-<li> Bachelor of Engineering in Computer Science and Technology, 2010. Central South University.
-</ul>
-</div>
-<div>
-<h3>Publications</h3>
-<ul>
-<li>"Owl: Scale and Flexibility in Distribution of Hot Content", Jason Flinn, Xianzheng Dou, Arushi Aggarwal, Alex Boyko, Francois Richard, Eric Sun, Wendy Tobagus, Nick Wolchko, and Fang Zhou, in OSDI 2022.<br>
-<li>"A Study of Database Performance Sensitivity to Experiment Settings", Yang Wang, Miao Yu, Yujie Hui, Fang Zhou, Yuyang Huang, Rui Zhu, Xueyuan Ren, Tianxi Li, and Xiaoyi Lu, in VLDB 2022.<br>
-<li>"Sixiang Ma, Fang Zhou, Mike Bond, and Yang Wang. Finding Unsafe Heterogeneous Configurations in Cloud Systems", Sixiang Ma, Fang Zhou, Mike Bond, and Yang Wang, in EuroSys 2021.<br>
-<li>"wPerf: Generic Off-CPU Analysis to Identify Bottleneck Waiting Events", Fang Zhou, Yifan Gan, Sixiang Ma, and Yang Wang, in OSDI 2018.<br>
-<li>"wPerf: Identifying Critical Waiting in Multi-threaded Applications", Fang Zhou, in SOSP SRC 2017.<br>
-<li>"SFMapReduce: An optimized MapReduce framework for Small Files", Fang Zhou, Hai Pham, Hao Zou, Jianhui Yue, and Weikuan Yu, in NAS 2015.<br>
-<li>"Design of an Ultrasonic Detecting System Based on LabVIEW", Changyun Miao, Fang Zhou, Chunqing Ye, and Jing Liu, in CISP 2009<br>
-<li>"Research on Application of RS-RBF Information Fusion in Gas Monitoring", Hua Fu, Dan Zhao, and Fang Zhou, Transducer and Microsystem Technologies, 2009. (In Chinese Version)<br>
-</ul>
-</div>
-<div>
-<h3>Honors and rewards</h3>
-<ul>
-<li>Nomination of OSU Graduate Associate Teaching Award, 2020<br>
-<li>Runner-up for Annual Student Research Competition in CSE Department, 2019<br>
-<li>Travel Grants: OSDI 2020, SOSP 2019, OSDI 2018, SOSP 2017, and SOSP SRC 2017.<br>
-<li>Selected for Poster Round in SOSP SRC 2017.<br>
-<li>Woltosz Fellowship at Auburn University, 2013 - 2015.<br>
-<li>Scholarship at Harbin Institute of Technology, 2010 - 2012.<br>
-<li>Scholarship at Central South University, 2006 - 2010.<br>
-<li>Outstanding Freshman Scholarship at Central South University, 2006.<br>
-</ul>
-</div>
-<!-- Google Analytics script 略-->
+  <div class="main-container">
+    <div class="profile-row">
+      <img src="me.jpeg" alt="Fang Zhou" class="profile-pic" />
+      <div class="profile-info">
+        <h1>Fang Zhou</h1>
+        <div class="subtitle">Tenure-Track Assistant Professor<br>Great Bay University</div>
+        <span class="email">zhou dot 1250 at osu.edu</span>
+      </div>
+    </div>
+    <hr>
+    <h3>About Me</h3>
+    <p>
+      I am a Tenure-Track Assistant Professor at Great Bay University. Before that, I was a Research Scientist at Meta.<br>
+      I obtained my Ph.D. degree in Computer Science from The Ohio State University under the supervision of <a href="http://web.cse.ohio-state.edu/~wang.7564/" target="_blank">Dr. Yang Wang</a>.
+    </p>
+    <div class="recruit-box">
+      I am currently seeking highly motivated <b>PhD students</b> (for Spring 2027 and Fall 2027), <b>research assistants</b>, <b>visiting students</b>, and <b>two postdoctoral researchers</b> to join my group.<br>
+      Experience with distributed systems and OS kernels is preferred.<br>
+      If you are interested, please feel free to contact me with your CV and transcripts.
+    </div>
+    <h3>Research Interests</h3>
+    <ul>
+      <li>AI/ML Systems</li>
+      <li>Performance Analysis</li>
+      <li>Distributed Systems</li>
+      <li>Operating Systems</li>
+      <li>Recommender Systems</li>
+    </ul>
+    <h3>Education</h3>
+    <ul>
+      <li> Ph.D. in Computer Science, 2021. The Ohio State University. Advisor: Dr. Yang Wang.</li>
+      <li> Master of Science in Computer Science, 2015. Auburn University. Advisor: Dr. Weikuan Yu.</li>
+      <li> Master of Engineering in Computer Science and Technology, 2012. Harbin Institute of Technology. Advisor: Dr. Debin Zhao</li>
+      <li> Bachelor of Engineering in Computer Science and Technology, 2010. Central South University.</li>
+    </ul>
+    <h3>Selected Publications</h3>
+    <ul>
+      <li>"Owl: Scale and Flexibility in Distribution of Hot Content", Jason Flinn, Xianzheng Dou, Arushi Aggarwal, Alex Boyko, Francois Richard, Eric Sun, Wendy Tobagus, Nick Wolchko, and Fang Zhou, in OSDI 2022.</li>
+      <li>"A Study of Database Performance Sensitivity to Experiment Settings", Yang Wang, Miao Yu, Yujie Hui, Fang Zhou, Yuyang Huang, Rui Zhu, Xueyuan Ren, Tianxi Li, and Xiaoyi Lu, in VLDB 2022.</li>
+      <li>"Finding Unsafe Heterogeneous Configurations in Cloud Systems", Sixiang Ma, Fang Zhou, Mike Bond, and Yang Wang, in EuroSys 2021.</li>
+      <li>"wPerf: Generic Off-CPU Analysis to Identify Bottleneck Waiting Events", Fang Zhou, Yifan Gan, Sixiang Ma, and Yang Wang, in OSDI 2018.</li>
+      <li>"wPerf: Identifying Critical Waiting in Multi-threaded Applications", Fang Zhou, in SOSP SRC 2017.</li>
+      <li>"SFMapReduce: An optimized MapReduce framework for Small Files", Fang Zhou et al., in NAS 2015.</li>
+      <li>"Design of an Ultrasonic Detecting System Based on LabVIEW", Changyun Miao, Fang Zhou, Chunqing Ye, and Jing Liu, in CISP 2009</li>
+      <li>"Research on Application of RS-RBF Information Fusion in Gas Monitoring", Hua Fu, Dan Zhao, and Fang Zhou, in Transducer and Microsystem Technologies, 2009.</li>
+    </ul>
+    <h3>Honors and Awards</h3>
+    <ul>
+      <li>Nomination of OSU Graduate Associate Teaching Award, 2020</li>
+      <li>Runner-up for Annual Student Research Competition in CSE Department, 2019</li>
+      <li>Travel Grants: OSDI 2020, SOSP 2019, OSDI 2018, SOSP 2017, and SOSP SRC 2017.</li>
+      <li>Selected for Poster Round in SOSP SRC 2017.</li>
+      <li>Woltosz Fellowship at Auburn University, 2013 - 2015.</li>
+      <li>Scholarship at Harbin Institute of Technology, 2010 - 2012.</li>
+      <li>Scholarship at Central South University, 2006 - 2010.</li>
+      <li>Outstanding Freshman Scholarship at Central South University, 2006.</li>
+    </ul>
+    <div class="footer">
+      &copy; 2026 Fang Zhou
+    </div>
+  </div>
 </body>
 </html>
