@@ -5,201 +5,197 @@
   <title>Fang Zhou</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Personal homepage of Fang Zhou">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --morandi-bg: #e7e6e4;
-      --morandi-head: #798488;
-      --morandi-section: #f5f6f8;
-      --morandi-link: #7fa4a9;
-      --morandi-link-hover: #a0bfc4;
-      --recruit-red: #b34740;
-    }
-    html, body {
-      background: var(--morandi-bg);
-      font-family: 'Inter', 'Roboto', 'Helvetica Neue', Arial, 'Liberation Sans', sans-serif;
+    body {
+      background: #f5f6fa;
+      font-family: 'Microsoft YaHei', '微软雅黑', 'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', sans-serif;
       color: #23272c;
       margin: 0;
-      padding: 0;
-      font-size: 18px;
-      line-height: 1.8;
+      padding: 0 0 56px 0;
+      font-size: 19px;
+      line-height: 1.85;
+      font-weight: 400;
     }
-    header {
-      padding: 2.2em 5vw 1em 5vw;
-      border-bottom: 1px solid #ccd1d8;
-      background: var(--morandi-bg);
+    .top-bar {
       display: flex;
       align-items: center;
-      gap: 2.2em;
+      gap: 1.7em;
+      padding: 40px 3vw 28px 3vw;
+      border-bottom: 1.5px solid #ccd1d8;
+      background: #f5f6fa;
     }
     .profile-pic {
-      width: 104px;
-      height: 104px;
+      width: 92px;
+      height: 92px;
       object-fit: cover;
-      border-radius: 15px;
-      background: #ced3d6;
-      border: 1.5px solid #c1c7cc;
+      border-radius: 14px;
+      background: #dbe1e5;
+      border: 1.5px solid #ccd1d8;
       flex-shrink: 0;
     }
-    .head-info h1 {
-      font-size: 2em;
+    .top-info {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 2.2em;
+      flex-wrap: wrap;
+    }
+    .top-info-main {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3em;
+    }
+    .top-info h1 {
+      font-size: 2.2em;
       font-weight: 700;
-      color: var(--morandi-head);
-      margin: 0 0 0.24em 0;
+      color: #375065;
+      margin: 0;
       letter-spacing: 1px;
     }
-    .head-info .subtitle {
-      color: #527277;
+    .top-info .subtitle {
+      color: #355c67;
+      font-size: 1.07em;
       font-weight: 500;
-      font-size: 1.09em;
-      margin-bottom: 0.42em;
     }
-    .head-info .email {
-      color: #4f5868;
+    .top-info .email {
+      color: #546778;
       font-size: 1em;
-      margin-bottom: 0.2em;
       word-break: break-all;
       display: inline-block;
     }
-    .section {
-      padding: 2.1em 5vw 1.6em 5vw;
-      background: var(--morandi-section);
-      border-bottom: 1px solid #e2e3e5;
-    }
-    .section:last-child {
-      border-bottom: none;
+    main {
+      margin: 0;
+      padding: 36px 3vw 0 3vw;
+      max-width: none;
     }
     h3 {
-      color: var(--morandi-link);
-      font-size: 1.18em;
+      color: #5089aa;
+      font-size: 1.15em;
       font-weight: 600;
-      margin: 0 0 0.72em 0;
+      margin: 2.2em 0 0.7em 0;
       letter-spacing: 0.5px;
-    }
-    .recruit-box {
-      color: var(--recruit-red);
-      background: #fff4f4;
-      border-left: 4px solid var(--recruit-red);
-      padding: 0.88em 1.05em;
-      border-radius: 4px;
-      font-size: 1.07em;
-      font-weight: 600;
-      line-height: 1.7;
-      margin-bottom: 1.6em;
-      margin-top: 0.8em;
-      box-shadow: 0 1px 6px rgba(180,71,64,.022);
-      max-width: 900px;
+      font-family: inherit;
     }
     ul {
       margin: 0.2em 0 0 1.2em;
       padding: 0;
     }
     li {
-      margin-bottom: 0.14em;
+      margin-bottom: 0.19em;
     }
     a {
-      color: var(--morandi-link);
+      color: #406182;
       text-decoration: none;
-      border-bottom: 1px dotted var(--morandi-link);
-      transition: color 0.15s, border-color 0.15s;
+      border-bottom: 1px dotted #5089aa;
+      transition: color 0.16s, border-color 0.16s;
     }
     a:hover {
-      color: var(--morandi-link-hover);
-      border-bottom: 1px solid var(--morandi-link-hover);
+      color: #175276;
+      border-bottom: 1px solid #175276;
     }
-    .footer {
-      padding: 2em 0 1em 0;
-      text-align: center;
-      color: #a3a6ac;
-      font-size: 1.01em;
-      background: var(--morandi-bg);
-      letter-spacing: 1px;
-      border-top: 1px solid #e2e3e5;
-      margin-top: 0;
+    .recruit-box {
+      color: #b34740;
+      background: #fff4f4;
+      border-left: 4px solid #b34740;
+      padding: 0.9em 1.1em;
+      border-radius: 4px;
+      font-size: 1.05em;
+      font-weight: 600;
+      line-height: 1.75;
+      margin-bottom: 1.5em;
+      margin-top: 0.7em;
+      max-width: 900px;
+      font-family: inherit;
     }
     @media (max-width: 600px) {
-      header {
+      .top-bar {
         flex-direction: column;
-        padding: 1.7em 2vw 0.8em 2vw;
-        gap: 1.1em;
         align-items: flex-start;
+        padding: 2em 4vw 0.7em 4vw;
+        gap: 1.1em;
       }
-      .profile-pic { width: 75px; height: 75px;}
-      .head-info h1 { font-size: 1.18em;}
-      .section { padding: 1.2em 2vw;}
-      .recruit-box { font-size: 0.98em;}
+      .profile-pic { width: 68px; height: 68px;}
+      .top-info h1 { font-size: 1.12em;}
+      .top-info { row-gap: 0.8em; column-gap: 1.1em;}
+      main { padding: 1.2em 4vw 0 4vw;}
+      h3 { margin-top: 1.4em;}
     }
   </style>
 </head>
 <body>
-  <header>
+  <div class="top-bar">
     <img src="me.jpeg" alt="Fang Zhou" class="profile-pic" />
-    <div class="head-info">
-      <h1>Fang Zhou</h1>
-      <div class="subtitle">Tenure-Track Assistant Professor<br>Great Bay University</div>
+    <div class="top-info">
+      <div class="top-info-main">
+        <h1>Fang Zhou</h1>
+        <div class="subtitle">Tenure-Track Assistant Professor, Great Bay University</div>
+      </div>
       <div class="email">zhouf@gbu.edu.cn</div>
     </div>
-  </header>
-  <section class="section">
-    <h3>About Me</h3>
-    <p>
-      I am a Tenure-Track Assistant Professor at Great Bay University. Before that, I was a Research Scientist at Meta.<br>
-      I obtained my Ph.D. degree in Computer Science from The Ohio State University under the supervision of 
-      <a href="http://web.cse.ohio-state.edu/~wang.7564/" target="_blank">Dr. Yang Wang</a>.
-    </p>
+  </div>
+  <main>
     <div class="recruit-box">
       I am currently seeking highly motivated <b>PhD students</b> (for Spring 2027 and Fall 2027), <b>research assistants</b>, <b>visiting students</b>, and <b>two postdoctoral researchers</b> to join my group.<br>
       Experience with distributed systems and OS kernels is preferred.<br>
       If you are interested, please feel free to contact me with your CV and transcripts.
     </div>
-  </section>
-  <section class="section">
+    <h3>About Me</h3>
+    <p>
+      I am a Tenure-Track Assistant Professor at Great Bay University.<br>
+      Before that, I was a Research Scientist at Meta.<br>
+      I obtained my Ph.D. in Computer Science from The Ohio State University (advisor: <a href="http://web.cse.ohio-state.edu/~wang.7564/" target="_blank">Prof. Yang Wang</a>).
+    </p>
     <h3>Research Interests</h3>
     <ul>
-      <li>AI/ML Systems</li>
-      <li>Performance Analysis</li>
-      <li>Distributed Systems</li>
-      <li>Operating Systems</li>
-      <li>Recommender Systems</li>
+      <li>AI/ML Systems, Performance Analysis, Distributed Systems, Operating Systems, Recommender Systems</li>
     </ul>
-  </section>
-  <section class="section">
     <h3>Education</h3>
     <ul>
-      <li> Ph.D. in Computer Science, 2021. The Ohio State University. Advisor: Dr. Yang Wang.</li>
-      <li> Master of Science in Computer Science, 2015. Auburn University. Advisor: Dr. Weikuan Yu.</li>
-      <li> Master of Engineering in Computer Science and Technology, 2012. Harbin Institute of Technology. Advisor: Dr. Debin Zhao</li>
-      <li> Bachelor of Engineering in Computer Science and Technology, 2010. Central South University.</li>
+      <li>Ph.D. in Computer Science, 2021. The Ohio State University. Advisor: Prof. Yang Wang.</li>
+      <li>M.S. in Computer Science, 2015. Auburn University. Advisor: Prof. Weikuan Yu.</li>
+      <li>M.E. in Computer Science and Technology, 2012. Harbin Institute of Technology. Advisor: Prof. Debin Zhao.</li>
+      <li>B.E. in Computer Science and Technology, 2010. Central South University.</li>
     </ul>
-  </section>
-  <section class="section">
     <h3>Selected Publications</h3>
     <ul>
-      <li>"Owl: Scale and Flexibility in Distribution of Hot Content", Jason Flinn, Xianzheng Dou, Arushi Aggarwal, Alex Boyko, Francois Richard, Eric Sun, Wendy Tobagus, Nick Wolchko, and Fang Zhou, in OSDI 2022.</li>
-      <li>"A Study of Database Performance Sensitivity to Experiment Settings", Yang Wang, Miao Yu, Yujie Hui, Fang Zhou, Yuyang Huang, Rui Zhu, Xueyuan Ren, Tianxi Li, and Xiaoyi Lu, in VLDB 2022.</li>
-      <li>"Finding Unsafe Heterogeneous Configurations in Cloud Systems", Sixiang Ma, Fang Zhou, Mike Bond, and Yang Wang, in EuroSys 2021.</li>
-      <li>"wPerf: Generic Off-CPU Analysis to Identify Bottleneck Waiting Events", Fang Zhou, Yifan Gan, Sixiang Ma, and Yang Wang, in OSDI 2018.</li>
-      <li>"wPerf: Identifying Critical Waiting in Multi-threaded Applications", Fang Zhou, in SOSP SRC 2017.</li>
-      <li>"SFMapReduce: An optimized MapReduce framework for Small Files", Fang Zhou et al., in NAS 2015.</li>
-      <li>"Design of an Ultrasonic Detecting System Based on LabVIEW", Changyun Miao, Fang Zhou, Chunqing Ye, and Jing Liu, in CISP 2009</li>
-      <li>"Research on Application of RS-RBF Information Fusion in Gas Monitoring", Hua Fu, Dan Zhao, and Fang Zhou, in Transducer and Microsystem Technologies, 2009.</li>
+      <li><b>2026</b>: Long-term Monitoring of Kernel and Hardware Events to Understand Latency Variance<br>
+        F Zhou, Y Huang, M Yu, S Ma, T Liu, Y Wang. arXiv:2601.10572</li>
+      <li><b>2025</b>: Negative Exclusion Filtering: Optimizing Ad Delivery Efficiency for Large-Scale Social Media Platforms<br>
+        M Zhang, G Song, F Zhou, D Liang, J Xiao, S Huang, L Qin, X Yan, R Shi, ... SIGIR 2025</li>
+      <li><b>2024</b>: Scaling user modeling: Large-scale online user representations for ads personalization in meta<br>
+        W Zhang, D Li, C Liang, F Zhou, Z Zhang, X Wang, R Li, Y Zhou, Y Huang, ... WWW 2024<br>
+        ERCache: An Efficient and Reliable Caching Framework for Large-Scale User Representations in Meta's Ads System<br>
+        F Zhou, Y Huang, D Liang, D Li, Z Zhang, K Wang, X Xin, A Aboelela, ... arXiv:2410.06497</li>
+      <li><b>2022</b>: Owl: Scale and flexibility in distribution of hot content<br>
+        J Flinn, X Dou, A Aggarwal, A Boyko, F Richard, E Sun, W Tobagus, ... OSDI 2022<br>
+        A study of database performance sensitivity to experiment settings<br>
+        Y Wang, M Yu, Y Hui, F Zhou, Y Huang, R Zhu, X Ren, T Li, X Lu. VLDB 2022</li>
+      <li><b>2021</b>: Finding heterogeneous-unsafe configuration parameters in cloud systems<br>
+        S Ma, F Zhou, MD Bond, Y Wang. EuroSys 2021<br>
+        Identifying and Understanding Performance Problems in Software Systems<br>
+        F Zhou. The Ohio State University (PhD Thesis)</li>
+      <li><b>2018</b>: wPerf: Generic Off-CPU analysis to identify bottleneck waiting events<br>
+        F Zhou, Y Gan, S Ma, Y Wang. OSDI 2018<br>
+        wPerf: Generic Off-CPU Analysis to Identify Bottleneck Waiting Events (Technical Report)</li>
+      <li><b>2017</b>: wPerf: Identifying Critical Waiting in Multi-threaded Applications<br>
+        F Zhou, Y Wang. SOSP SRC 2017</li>
+      <li><b>2015</b>: Sfmapreduce: An optimized mapreduce framework for small files<br>
+        F Zhou, H Pham, J Yue, H Zou, W Yu. NAS 2015<br>
+        Assessment of Multiple Map Reduce Strategies for Fast Analytics of Small Files<br>
+        F Zhou. Auburn University (Master Thesis)</li>
+      <li><b>2009</b>: Design of an ultrasonic detecting system based on labview<br>
+        C Miao, F Zhou, C Ye, J Liu. CISP 2009<br>
+        Research on Application of RS-RBF Information Fusion in Gas Monitoring<br>
+        Hua Fu, Dan Zhao, Fang Zhou. Sensors & Microsystems (in Chinese)</li>
     </ul>
-  </section>
-  <section class="section">
     <h3>Honors and Awards</h3>
     <ul>
       <li>Nomination of OSU Graduate Associate Teaching Award, 2020</li>
       <li>Runner-up for Annual Student Research Competition in CSE Department, 2019</li>
-      <li>Travel Grants: OSDI 2020, SOSP 2019, OSDI 2018, SOSP 2017, and SOSP SRC 2017.</li>
-      <li>Selected for Poster Round in SOSP SRC 2017.</li>
-      <li>Woltosz Fellowship at Auburn University, 2013 - 2015.</li>
-      <li>Scholarship at Harbin Institute of Technology, 2010 - 2012.</li>
-      <li>Scholarship at Central South University, 2006 - 2010.</li>
-      <li>Outstanding Freshman Scholarship at Central South University, 2006.</li>
+      <li>Travel Grants: OSDI 2020, SOSP 2019, OSDI 2018, SOSP 2017, SOSP SRC 2017</li>
+      <li>Woltosz Fellowship at Auburn University, 2013-2015</li>
+      <li>Scholarship at HIT, 2010–2012; at CSU, 2006–2010; Outstanding Freshman, 2006</li>
     </ul>
-  </section>
-  <div class="footer">
-    &copy; 2026 Fang Zhou
-  </div>
+  </main>
 </body>
 </html>
